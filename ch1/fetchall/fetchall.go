@@ -13,7 +13,7 @@ func main() {
 	start := time.Now()
 	ch := make(chan string)
 	for _, url := range os.Args[1] {
-		go fetch(url, ch) //starts a goroutine
+		go fetch(string(url), ch) //starts a goroutine
 	}
 	for range os.Args[1] {
 		fmt.Println(<-ch) //receive output from channel ch
