@@ -15,5 +15,5 @@ func main() {
 
 //handler echoes Path of the requested URL
 func handler(w http.ResponseWriter, r http.Response) {
-	fmt.Fprintf(w, "URL.Path = %q\n".r.URL.Path)
+	fmt.Fprintf(w, "URL.Path = %q\n", r.URL.Path)
 }
